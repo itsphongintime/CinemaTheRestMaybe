@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #3B1578;
+    padding-bottom: 140px;
+    flex-direction: column;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(118, 118, 128, 0.12);
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin: 5% 5% 0 5%;
+}
+
+.search-bar {
+    width: 313px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    font-size: 17px;
+    padding: 7px 8px;
+}
+
+.magnifyingglass, .microphone {
+    padding: 7px 8px;
+}
+
+.moviescroller {
+    margin: 20px 20px 0 20px;
+}
+
+.moviescroller>p {
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+}
+
+.scroller {
+    overflow-x: scroll;
+    margin-top: 20px;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scroller>a {
+    margin-right: 20px;
+}
+
+.scroller>img {
+    width: 100px;
+    height: 130px;
+    border-radius: 20px;
+}
+
+.scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(90deg, rgba(28,25,207,1) 0%, rgba(125,42,196,1) 50%, rgba(224,84,132,1) 100%);
+    justify-content: space-around;
+}
+
+.footer>button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bigButton {
+    height: 120px;
+    position: absolute;
+    top: -22px;
+    left: 5px;
+}
+
+.generalbutton{
+    height: 20px;
+}
+
+
+
+@media only screen and (max-width: 390px) {
+    .container {
+        background-color: #f0f0f0;
+    }
+}
+
+.d-flex {
+    display: flex;
+}

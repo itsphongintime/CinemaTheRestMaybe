@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #2C0000, #140000 50%, #140000 50%, #2C0000 100%);
+    align-items: center;
+    flex-direction: column;
+}
+
+.header  {
+    width: 90%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header>p  {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.header>button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+hr {
+    border: 0;
+    width: 90%;
+    height: 1px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+}
+
+.blurred-background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.pre-headertext {
+    margin: 25px 60px;
+}
+
+.pre-headertext>p {
+    color: white;
+    font-size: 17px;
+    text-align: center;
+}
+
+.masked-image {
+    width: 280px;
+    height: 520px;
+    background: url(assets/masked-ticket.png);
+    border-radius: 20px;
+    mask-image: url(assets/masked-ticket.png);
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
+    z-index: 2;
+}
+
+.masked-container::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #2C0000, white 50%, #2C0000 100%);
+    border-radius: 20px;
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.1;
+}
+
+.masked-image>:first-child {
+    height: 72%;
+    border: 2px solid;
+    z-index: 2;
+    border-image: linear-gradient(#D40800, #FF000000) 30;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.masked-image>:last-child {
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 28%;
+    z-index: 2;
+    border-top: 2px dashed black;
+}
+
+.masked-image-left {
+    width: 140px;
+    height: 476px;
+    background: url(assets/masked-ticket-left.png);
+    border-radius: 20px;
+    mask-image: url(assets/masked-ticket-left.png);
+    position: absolute;
+    transform-origin: bottom right;
+    transform: rotate(-6deg);
+    top: 230px;
+    left: 56px;
+    z-index: 0;
+}
+
+.masked-image-right {
+    width: 293px;
+    height: 473px;
+    background-image: url(assets/masked-ticket-right.png);
+    border-radius: 20px;
+    mask-image: url(assets/masked-ticket-right.png);
+    position: absolute;
+    transform-origin: bottom left;
+    transform: rotate(6deg);
+    top: 220px;
+    left: 84px;
+    z-index: 0;
+}
+
+.ticket-info-text {
+    justify-content: space-between;
+    margin: 20px 50px 10px 50px;
+}
+
+.ticket-info-text>p {
+    color: black;
+    font-size: 12px;
+}
+
+.barcode {
+    margin-left: 32px;
+}
+
+.dots {
+    margin: 30px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #580000, #690000);
+    justify-content: space-around;
+}
+
+.footer>button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bigButton {
+    position: absolute;
+    top: -30.5px
+}
+
+@media only screen and (max-width: 390px) {
+    .container {
+        background-color: #f0f0f0;
+    }
+}
+
+.d-flex {
+    display: flex;
+}
